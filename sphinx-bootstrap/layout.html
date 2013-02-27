@@ -31,6 +31,7 @@
     {%- if render_sidebar %}
         <div class="sphinxsidebar">
             <div class="sphinxsidebarwrapper">
+                {{ seachbox() }}
                 {%- if sidebars != None %}
                     {#- new style sidebar: explicitly include/exclude templates #}
                     {%- for sidebartemplate in sidebars %}
@@ -82,6 +83,9 @@
     {%- endblock %}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='http://fonts.googleapis.com/css?family=Crete+Round' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap-responsive.min.css" type="text/css"/>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'/>
     <link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css"/>
     <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css"/>
     {%- for cssfile in css_files %}
@@ -185,9 +189,6 @@
                 {%- endblock %}
 
                 {%- block relbar1 %}{{ relbar() }}{% endblock %}
-                <div class="pull-right">
-                    {{ seachbox() }}
-                </div>
             </div>
         </div>
     </div>
