@@ -79,8 +79,6 @@
     <link href='http://fonts.googleapis.com/css?family=Crete+Round' rel='stylesheet' type='text/css'/>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/prettify/r224/prettify.css"/>
     <link rel="stylesheet" href="/static/desert.css"/>
-    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css" type="text/css"/>
-    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap-responsive.min.css" type="text/css"/>
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'/>
     <link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css"/>
     {%- for cssfile in css_files %}
@@ -172,19 +170,6 @@
 
 
 {%- block header %}
-
-    <div class="navbar navbar-static-top navbar-inverse">
-        <div class="navbar-inner">
-            <div class="container">
-                {%- block headerlogo %}
-                <a class="brand" href="/" style="padding:0px 10px 0px;">
-                    <img src="/static/img/cosmic-logo.png"/>
-                </a>
-                {%- endblock %}
-                {%- block relbar1 %}{{ relbar() }}{% endblock %}
-            </div>
-        </div>
-    </div>
 {% endblock %}
 
 {%- block content %}
