@@ -20,7 +20,7 @@
 }
 
 h1, h2, h3, h4, h5, h6 {
-    padding-bottom: .3em;
+    margin-top: 40px !important;
 }
 
 .section {
@@ -102,6 +102,6 @@ tr > td:nth-child(2) {
     margin-bottom: 10px !important;
 }
 
-.form-search {
+.sphinxsidebar form {
     margin-top: 40px !important;
 }
