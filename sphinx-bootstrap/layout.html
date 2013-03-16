@@ -26,7 +26,6 @@
     {%- if render_sidebar %}
         <div class="sphinxsidebar">
             <div class="sphinxsidebarwrapper">
-                {{ seachbox() }}
                 {%- if sidebars != None %}
                     {#- new style sidebar: explicitly include/exclude templates #}
                     {%- for sidebartemplate in sidebars %}
@@ -41,12 +40,18 @@
                         {%- include "relations.html" %}
                     {%- endblock %}
                     {%- block sidebarsourcelink %}
-                        {%- include "sourcelink.html" %}
+                        {%- if show_source and has_source and sourcename %}
+                            <h4>{{ _('This Page') }}</h4>
+                            <p>
+                            <a href="{{ pathto('_sources/' + sourcename, true)|e }}" rel="nofollow">{{ _('Show Source') }}</a>
+                            </p>
+                        {%- endif %}
                     {%- endblock %}
                     {%- if customsidebar %}
                         {%- include customsidebar %}
                     {%- endif %}
                 {%- endif %}
+                {{ seachbox() }}
             </div>
         </div>
     {%- endif %}
@@ -54,10 +59,11 @@
 
 {%- macro seachbox() %}
     {%- if pagename != "search" %}
-        <form action="{{ pathto('search') }}" method="get">
-            <input type="text" name="q" placeholder="search"/>
+        <form action="{{ pathto('search') }}" method="get" class="form-search">
+            <input type="search" class="seach-query input-medium" name="q" placeholder="Search"/>
             <input type="hidden" name="check_keywords" value="yes"/>
             <input type="hidden" name="area" value="default"/>
+            <input type="submit" class="btn" value="Go"/>
         </form>
     {%- endif %}
 {%- endmacro -%}
@@ -146,16 +152,16 @@
     {%- block sidebar1 %} {# possible location for sidebar #} {% endblock %}
     <div class="container">
         <div class="content row">
-            {%- block document %}
-                <div class="span9">
-                    {% block body %} {% endblock %}
-                </div>
-            {%- endblock %}
             {%- block sidebar2 %}
                 <div class="span3">
                     {{ sidebar() }}
                 </div>
             {% endblock %}
+            {%- block document %}
+                <div class="span9">
+                    {% block body %} {% endblock %}
+                </div>
+            {%- endblock %}
         </div>
     </div>
 {%- endblock %}

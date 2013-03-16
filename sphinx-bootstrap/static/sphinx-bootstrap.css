@@ -1,7 +1,7 @@
 /* To change themes. Un-comment the theme you would like to use. */
 
-@import "bootstrap.min.css";
-@import "bootstrap-responsive.min.css";
+/* @import "bootstrap.min.css"; */
+/* @import "bootstrap-responsive.min.css"; */
 
 .navbar .brand {
     font-size: 25px;
@@ -98,75 +98,10 @@ tr > td:nth-child(2) {
     color: #4070A0;
 }
 
-.quick-links {
-    border-radius: 3px 3px 3px 3px;
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
-    list-style: none outside none;
-    /*margin: 43px 0 0;*/
-    margin: 0;
-    padding: 5px 20px;
-    text-align: center;
-    -webkit-box-shadow: inset 0 5px 15px rgba(0, 0, 0, .1);
-    -moz-box-shadow: inset 0 5px 15px rgba(0, 0, 0, .1);
+.sphinxsidebar h4 {
+    margin-bottom: 10px !important;
 }
 
-.quick-links li {
-    display: inline;
-    line-height: 30px;
-    margin: 0 5px;
-}
-
-.quick-links .divider {
-    color: #999999;
-}
-
-.quick-links strong {
-    font-weight: normal;
-}
-
-.quick-links .github-btn, .quick-links .tweet-btn, .quick-links .follow-btn, .plusone-container {
-    position: relative;
-    top: 5px;
-}
-
-input[type="submit"] {
-    display: inline-block;
-    padding: 5px 14px 6px;
-    font-size: 13px;
-    line-height: normal;
-    color: #333;
-    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
-    background-color: #e6e6e6;
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), color-stop(25%, #ffffff), to(#e6e6e6));
-    background-image: -webkit-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
-    background-image: -moz-linear-gradient(top, #ffffff, #ffffff 25%, #e6e6e6);
-    background-image: -ms-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
-    background-image: -o-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
-    background-image: linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
-    background-repeat: no-repeat;
-    border: 1px solid #ccc;
-    border-bottom-color: #bbb;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-    cursor: pointer;
-    -webkit-transition: 0.1s linear all;
-    -moz-transition: 0.1s linear all;
-    -ms-transition: 0.1s linear all;
-    -o-transition: 0.1s linear all;
-    transition: 0.1s linear all;
-}
-input[type="submit"]:hover {
-    color: #404040;
-    text-decoration: none;
-    background-position: 0 -15px;
-}
-
-input[type="submit"].active, input[type="submit"]:active {
-    -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);
-    -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);
+.form-search {
+    margin-top: 40px !important;
 }
