@@ -162,7 +162,7 @@
                 </div>
             {% endblock %}
             {%- block document %}
-                <div class="span9">
+                <div class="span8">
                     {% block body %} {% endblock %}
                 </div>
             {%- endblock %}
@@ -171,7 +171,7 @@
 {%- endblock %}
 
 {%- block footer %}
-    <div class="footer">
+    <footer>
         {#        {%- block relbar2 %}{{ relbar(bottom=True) }}{% endblock %}#}
         <div class="container">
             {%- if show_copyright %}
@@ -189,7 +189,7 @@
                     on {{ last_updated }}.{% endtrans %}
             {%- endif %}
         </div>
-    </div>
+    </footer>
 {%- endblock %}
 </body>
 </html>
