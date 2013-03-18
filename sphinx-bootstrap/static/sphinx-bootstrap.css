@@ -104,4 +104,5 @@ tr > td:nth-child(2) {
 
 .sphinxsidebar form {
     margin-top: 40px !important;
+    margin-bottom: 5px !important;
 }

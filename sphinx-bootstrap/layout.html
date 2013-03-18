@@ -31,6 +31,7 @@
                     {%- for sidebartemplate in sidebars %}
                         {%- include sidebartemplate %}
                     {%- endfor %}
+                    {{ seachbox() }}
                 {%- else %}
                     {#- old style sidebars: using blocks -- should be deprecated #}
                     {%- block sidebartoc %}
@@ -39,11 +40,13 @@
                     {%- block sidebarrel %}
                         {%- include "relations.html" %}
                     {%- endblock %}
+                    {{ seachbox() }}
                     {%- block sidebarsourcelink %}
                         {%- if show_source and has_source and sourcename %}
-                            <h4>{{ _('This Page') }}</h4>
                             <p>
-                            <a href="{{ pathto('_sources/' + sourcename, true)|e }}" rel="nofollow">{{ _('Show Source') }}</a>
+                                <a href="https://github.com/cosmic-api/documentation/blob/master/source/{{ pagename }}.rst" rel="nofollow">View page source</a><br/>
+                                <a href="https://github.com/cosmic-api/documentation/issues/new">Report a bug</a><br/>
+                                <a href="{{ pathto('genindex') }}">Index</a>
                             </p>
                         {%- endif %}
                     {%- endblock %}
@@ -51,7 +54,6 @@
                         {%- include customsidebar %}
                     {%- endif %}
                 {%- endif %}
-                {{ seachbox() }}
             </div>
         </div>
     {%- endif %}
