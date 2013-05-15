@@ -44,8 +44,8 @@
                     {%- block sidebarsourcelink %}
                         {%- if show_source and has_source and sourcename %}
                             <p>
-                                <a href="https://github.com/cosmic-api/documentation/blob/master/source/{{ pagename }}.rst" rel="nofollow">View page source</a><br/>
-                                <a href="https://github.com/cosmic-api/documentation/issues/new">Report a bug</a><br/>
+                                <a href="{{ theme_github_url }}/blob/master/source/{{ pagename }}.rst" rel="nofollow">View page source</a><br/>
+                                <a href="{{ theme_github_url }}/issues/new">Report a bug</a><br/>
                                 <a href="{{ pathto('genindex') }}">Index</a>
                             </p>
                         {%- endif %}
@@ -77,13 +77,8 @@
     <meta http-equiv="Content-Type"
           content="text/html; charset={{ encoding }}"/>
     {{ metatags }}
-    {%- if not embedded and docstitle %}
-        {%- set titlesuffix = " &mdash; "|safe + docstitle|e %}
-    {%- else %}
-        {%- set titlesuffix = "" %}
-    {%- endif %}
     {%- block htmltitle %}
-        <title>{{ title|striptags|e }}{{ titlesuffix }}</title>
+        <title>{{ docstitle }}</title>
     {%- endblock %}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css"/>
