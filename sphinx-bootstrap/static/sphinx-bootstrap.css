@@ -116,3 +116,8 @@ footer {
     margin-top: 300px !important;
     margin-bottom: 30px !important;
 }
+
+.align-right {
+    float: right;
+    margin-left: 20px;
+}
