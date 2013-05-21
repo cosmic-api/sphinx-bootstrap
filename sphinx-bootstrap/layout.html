@@ -173,10 +173,10 @@
                 {%- if hasdoc('copyright') %}
                     {% trans path=pathto('copyright'), copyright=copyright|e %}&copy;
                         <a href="{{ path }}">Copyright</a> {{ copyright }}
-                        .{% endtrans %}
+                        {% endtrans %}
                 {%- else %}
                     {% trans copyright=copyright|e %}&copy;
-                        Copyright {{ copyright }}.{% endtrans %}
+                        Copyright {{ copyright }}{% endtrans %}
                 {%- endif %}
             {%- endif %}
             {%- if last_updated %}
